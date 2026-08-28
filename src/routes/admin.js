@@ -11,7 +11,11 @@ router.post('/login', (req, res) => {
     res.cookie('admin_pin', pin, { httpOnly: true, maxAge: 86400000 });
     return res.json({ success: true, message: 'Authentification réussie' });
   }
-  res.status 401).json({ success: false, error: { message: 'PIN incorrect' } });
+  res.status(401).json({
+  success: false,
+  error: {
+    message: "PIN incorrect"
+  }
 });
 
 router.get('/stats', adminAuth, async (req, res, next) => {
