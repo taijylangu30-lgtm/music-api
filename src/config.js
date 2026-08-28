@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
   port: process.env.PORT || 3000,
   mongoUri: process.env.MONGODB_URI || 'mongodb://localhost:27017/musicapi',
-  adminPin: process.env.ADMIN_PIN || '123456',
+  adminPin: process.env.ADMIN_PIN || '2009',
   adminSecret: process.env.ADMIN_SESSION_SECRET || 'secret_key_change_in_prod',
   provider: process.env.MUSIC_PROVIDER || 'spotify',
   spotify: {
