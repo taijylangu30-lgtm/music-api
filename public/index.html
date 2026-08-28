@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSIC — Discover Sound</title>
+  <meta name="description" content="Plateforme de découverte musicale d'élite.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div>
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+        </div>
+        <span>MUSIC</span>
+      </a>
+
+      <nav class="nav-section">
+        <div class="nav-title">Menu</div>
+        <a href="/" class="nav-link active" aria-label="Accueil">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 00-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 00-1 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="/search.html" class="nav-link" aria-label="Recherche">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          Explorer
+        </a>
+      </nav>
+
+      <nav class="nav-section">
+        <div class="nav-title">Bibliothèque</div>
+        <a href="/favorites.html" class="nav-link" aria-label="Favoris">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          Favoris
+        </a>
+        <a href="/playlists.html" class="nav-link" aria-label="Playlists">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          Playlists
+        </a>
+      </nav>
+    </div>
+
+    <div class="nav-section">
+      <a href="/developers.html" class="nav-link" aria-label="API Documentation">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        API & Devs
+      </a>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <header class="top-header">
+      <div style="font-weight:600; font-size: 0.9rem; color: var(--text-secondary);">Music Platform</div>
+      <a href="/admin/index.html" class="nav-link" style="padding: 6px 12px; font-size: 0.85rem;" aria-label="Admin">Admin</a>
+    </header>
+
+    <main class="content-area">
+      <section class="hero-banner">
+        <h1 class="hero-title">Your sound.<br>Your world.</h1>
+        <p class="hero-subtitle">Recherchez vos morceaux, artistes et albums préférés sur une interface fluide et moderne.</p>
+        <div class="search-box-hero">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input type="text" id="searchInput" placeholder="Rechercher un titre, artiste..." autocomplete="off">
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <span>🔥 Tendances</span>
+        </div>
+        <div class="grid-cards" id="trendingGrid">
+          <div class="card skeleton" style="height: 240px;"></div>
+          <div class="card skeleton" style="height: 240px;"></div>
+          <div class="card skeleton" style="height: 240px;"></div>
+          <div class="card skeleton" style="height: 240px;"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <span>⭐ Artistes Populaires</span>
+        </div>
+        <div class="grid-cards" id="artistsGrid">
+          <div class="card card-circular skeleton" style="height: 220px;"></div>
+          <div class="card card-circular skeleton" style="height: 220px;"></div>
+          <div class="card card-circular skeleton" style="height: 220px;"></div>
+          <div class="card card-circular skeleton" style="height: 220px;"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="/" class="active" aria-label="Home">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 00-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 00-1 1m-6 0h6"/></svg>
+      Home
+    </a>
+    <a href="/search.html" aria-label="Explorer">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      Search
+    </a>
+    <a href="/favorites.html" aria-label="Favoris">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+      Favoris
+    </a>
+  </nav>
+
+  <div class="player-bar hidden" id="playerBar">
+    <div class="player-track-info">
+      <img src="" alt="Cover" class="player-cover" id="playerCover">
+      <div class="player-meta">
+        <span class="player-title" id="playerTitle">Titre de la chanson</span>
+        <span class="player-artist" id="playerArtist">Artiste</span>
+      </div>
+    </div>
+
+    <div class="player-controls-center">
+      <div class="controls-btns">
+        <button class="control-btn" id="btnPrev" aria-label="Morceau précédent">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+        </button>
+        <button class="control-btn control-btn-main" id="btnPlay" aria-label="Lecture/Pause">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <button class="control-btn" id="btnNext" aria-label="Morceau suivant">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M16 18h2V6h-2zm-11-6l8.5 6V6z"/></svg>
+        </button>
+      </div>
+      <div class="progress-container">
+        <span id="currentTime">0:00</span>
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span id="totalDuration">0:00</span>
+      </div>
+    </div>
+
+    <div class="player-right-actions">
+      <button class="control-btn" id="btnFavorite" aria-label="Ajouter aux favoris">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+  </html>
